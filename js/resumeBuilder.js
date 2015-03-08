@@ -1,30 +1,30 @@
 var bio = {
-    "name": "Chad Stieve",
-    "role": "Lead Developer",
-    "contacts": {
-        "mobile": "555-555-4444",
-        "email": "cstieve@hotmail.com",
-        "github": "cstieve",
-        "twitter": null,
-        "blog": null,
-        "location": "Livonia, MI"
-    },
-    "welcomeMessage": "Thanks for visiting my resume!",
-    "skills": [
-        "Java",
-        "Spring(WebMVC, Batch, Mobile)",
-        "GWT",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "jQuery",
-        "BackboneJS",
-        "UnderscoreJS",
-        "RequireJS"
-    ],
-    "biopic": "images/fry.jpg",
-    display: function()
-    {
+	"name": "Chad Stieve",
+	"role": "Lead Developer",
+	"contacts": {
+		"mobile": "555-555-4444",
+		"email": "cstieve@hotmail.com",
+		"github": "cstieve",
+		"twitter": null,
+		"blog": null,
+		"location": "Livonia, MI"
+	},
+	"welcomeMessage": "Thanks for visiting my resume!",
+	"skills": [
+		"Java",
+		"Spring(WebMVC, Batch, Mobile)",
+		"GWT",
+		"JavaScript",
+		"HTML",
+		"CSS",
+		"jQuery",
+		"BackboneJS",
+		"UnderscoreJS",
+		"RequireJS"
+	],
+	"biopic": "images/fry.jpg",
+	display: function()
+	{
 		/* Name and Role */
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		$("#header").prepend(formattedRole);
@@ -68,41 +68,41 @@ var bio = {
 
 		var formattedContactLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#topContacts, #footerContacts").append(formattedContactLocation);
-    }
+	}
 };
 
 var work = {
-    "jobs": [
-        {
-            "employer": "GE",
-            "title": "Lead Developer",
-            "location": "Van Buren Township, MI",
-            "dates": "February 2014 - Current",
-            "description": "Crazy fantastic Lead Developer on a super big customer facing self-service web application and a payment gateway web application."
-        },
-        {
-            "employer": "GE",
-            "title": "Software Developer",
-            "location": "Van Buren Township, MI",
-            "dates": "September 2012 - February 2014",
-            "description": "Super cool full-stack web application developer on a payment gateway web application and a customer self-service web application."
-        },
-        {
-            "employer": "MediaSpan",
-            "title": "Software Developer",
-            "location": "Ann Arbor, MI",
-            "dates": "2008 - September 2012",
-            "description": "Full-stack web application developer working on account receivables/advertising software."
-        },
-        {
-            "employer": "MediaSpan",
-            "title": "Customer Support",
-            "location": "Ann Arbor, MI",
-            "dates": "2004 - September 2008",
-            "description": "Provide technical support for account receivables/advertising software."
-        }
-    ],
-    display: function()
+	"jobs": [
+		{
+			"employer": "GE",
+			"title": "Lead Developer",
+			"location": "Van Buren Township, MI",
+			"dates": "February 2014 - Current",
+			"description": "Crazy fantastic Lead Developer on a super big customer facing self-service web application and a payment gateway web application."
+		},
+		{
+			"employer": "GE",
+			"title": "Software Developer",
+			"location": "Van Buren Township, MI",
+			"dates": "September 2012 - February 2014",
+			"description": "Super cool full-stack web application developer on a payment gateway web application and a customer self-service web application."
+		},
+		{
+			"employer": "MediaSpan",
+			"title": "Software Developer",
+			"location": "Ann Arbor, MI",
+			"dates": "2008 - September 2012",
+			"description": "Full-stack web application developer working on account receivables/advertising software."
+		},
+		{
+			"employer": "MediaSpan",
+			"title": "Customer Support",
+			"location": "Ann Arbor, MI",
+			"dates": "2004 - September 2008",
+			"description": "Provide technical support for account receivables/advertising software."
+		}
+	],
+	display: function()
 	{
 		for(job in work.jobs){
 			$("#workExperience").append(HTMLworkStart);
@@ -118,38 +118,38 @@ var work = {
 };
 
 var education = {
-    "schools": [
-        {
-            "name": "Walsh College",
-            "location": "Troy, MI",
-            "degree": "Masters",
-            "majors": [
-                "MBA-Finance"
-            ],
-            "dates": 2008,
-            "url": "http://www.walshcollege.edu"
-        },
-        {
-            "name": "Western Michigan University",
-            "location": "Kalamazoo, MI",
-            "degree": "Bachelors",
-            "majors": [
-                "Computer Information Systems"
-            ],
-            "dates": 2004,
-            "url": "http://www.wmu.edu"
-        }
-    ],
-    "onlineCourses": [
-        {
-            "title": "Front-End Web Developer Nano-Degree",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "http://www.udacity.com"
-        }
-    ],
-    display: function()
-    {
+	"schools": [
+		{
+			"name": "Walsh College",
+			"location": "Troy, MI",
+			"degree": "Masters",
+			"majors": [
+				"MBA-Finance"
+			],
+			"dates": 2008,
+			"url": "http://www.walshcollege.edu"
+		},
+		{
+			"name": "Western Michigan University",
+			"location": "Kalamazoo, MI",
+			"degree": "Bachelors",
+			"majors": [
+				"Computer Information Systems"
+			],
+			"dates": 2004,
+			"url": "http://www.wmu.edu"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "Front-End Web Developer Nano-Degree",
+			"school": "Udacity",
+			"date": 2015,
+			"url": "http://www.udacity.com"
+		}
+	],
+	display: function()
+	{
 		for(school in this.schools){
 			$("#education").append(HTMLschoolStart);
 			
@@ -172,7 +172,7 @@ var education = {
 			courseContent = courseContent + HTMLonlineURL.replace("%data%", this.onlineCourses[course].url);
 			$(".education-entry:last").append(courseContent);
 		}
-    }
+	}
 };
 
 var projects = {
