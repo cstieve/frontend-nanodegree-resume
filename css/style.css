@@ -91,8 +91,8 @@ a {
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.dark-gray {
+  background-color: #4A4A4A;
 }
 
 .orange-text {
@@ -110,13 +110,14 @@ a {
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.blue {
+  background-color: #2B4C6F;
+
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #2B4C6F;
 }
 
 .flex-box {
